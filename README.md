@@ -1,4 +1,4 @@
-![Banner](Docs/Banner.jpeg)
+![Banner](Docs/Banner.PNG)
 
 # Smart Chamber Heater
 
