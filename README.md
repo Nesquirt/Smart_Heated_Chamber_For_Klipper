@@ -1,3 +1,5 @@
+![Banner](Docs/Banner.jpeg)
+
 # Smart Chamber Heater
 
 > An adaptive predictive chamber heating controller for Klipper with intelligent heat-up management, safety features and automatic control mode.
