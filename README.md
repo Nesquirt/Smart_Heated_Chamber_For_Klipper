@@ -18,6 +18,10 @@ The project is intended for enclosed printers using a PTC chamber
 heater, but its architecture allows it to be adapted to virtually any
 chamber heating system.
 
+[FAQ](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/blob/main/Docs/faq.md)
+
+You can find other doc [here](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/tree/main/Docs)
+
   -----------------------------------------------------------------------
 
 > WARNING
@@ -224,6 +228,7 @@ Compatible with:
 - Multi-zone chamber heating
 
 ------------------------------------------------------------------------
+
 
 # License
 
