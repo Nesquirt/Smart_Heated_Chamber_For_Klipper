@@ -1,12 +1,12 @@
 # 📖 Usage
 
-Using Smart Chamber Heater is designed to be as simple as using any standard Klipper heater.
+Using Smart Chamber Heater is intentionally simple.
 
-Follow these **5 simple steps** and let the controller manage the rest automatically.
+Unlike traditional chamber controllers, **you only need to choose the chamber temperature you want**. Smart Chamber Heater automatically manages everything else.
 
 ---
 
-# 🚀 Step 1 — Install Smart Chamber Heater
+# 🚀 Step 1 — Install the Controller
 
 Copy `chamber_heater.cfg` into your Klipper configuration directory.
 
@@ -22,125 +22,173 @@ Once Klipper has restarted successfully, Smart Chamber Heater is ready to use.
 
 ---
 
-# 🌡️ Step 2 — Set Your Desired Chamber Temperature
+# 🌡️ Step 2 — Choose Your Chamber Temperature
 
-Use the `chamber_heater` temperature control in Fluidd, Mainsail or via G-code.
-
-Example:
-
-```gcode
-SET_HEATER_TEMPERATURE HEATER=chamber_heater TARGET=50
-```
-
-or simply enter **50°C** in the web interface.
-
-Nothing else needs to be configured during normal operation.
-
----
-
-# ❗ Step 3 — Understand What You're Setting
-
-> [!IMPORTANT]
->
-> The value entered into `chamber_heater` is the **desired chamber temperature**, **not** the temperature of the PTC heater.
-
-Examples:
-
-| Desired chamber temperature | Set |
-|----------------------------:|:---:|
-| 40°C | 40°C |
-| 50°C | 50°C |
-| 60°C | 60°C |
-
-Do **not** enter the maximum operating temperature of your PTC heater.
-
-If your heater can reach **75°C**, **90°C** or **125°C**, those are hardware limits—not the value you should normally enter.
+Set the desired chamber temperature using the standard `chamber_heater` control from Fluidd, Mainsail or through G-code.
 
 For example:
 
-```gcode
-SET_HEATER_TEMPERATURE HEATER=chamber_heater TARGET=75
+```text
+SET_HEATER_TEMPERATURE HEATER=chamber_heater TARGET=50
 ```
 
-means:
+or simply enter **50°C** in the `chamber_heater` temperature box.
 
-> **"Heat the printer chamber to 75°C."**
+At this point, you are **NOT** setting the temperature of the PTC heater.
 
-It does **not** mean:
+Instead, you are telling Smart Chamber Heater:
 
-> **"Limit the PTC heater to 75°C."**
+> **"I want my printer chamber to reach 50°C."**
 
-If you enter **75°C**, Smart Chamber Heater will attempt to heat the **entire chamber** to **75°C**.
+That's all.
+
+From now on, Smart Chamber Heater will handle the entire heating process automatically.
 
 ---
 
-# 🧠 Step 4 — Let the Controller Work
+# ❗ Step 3 — Don't Be Surprised When the Target Changes
 
-As soon as heating starts, Smart Chamber Heater stores your requested chamber temperature internally.
+This is the part that surprises almost every new user.
 
-From that moment, it automatically manages the heater by continuously calculating the optimal heater target using:
+A few seconds after heating starts, you will notice that the displayed `chamber_heater` target begins changing automatically.
 
-- Chamber temperature
-- Chamber heating rate
-- Remaining thermal energy inside the PTC
-- Selected control mode
-- Hold Mode
-- Safety limits
-- Adaptive Predictive Control
+For example, you initially set:
 
-Because of this, the displayed heater target will change during operation.
-
-> [!NOTE]
->
-> This is completely normal.
->
-> The displayed heater target is a **temporary working value** calculated by the controller.
->
-> Your original chamber temperature is always stored internally and never changes.
-
-Example:
-
-```
-Requested chamber temperature
+```text
 50°C
+```
 
-↓
+After a short time, you may see:
 
-Temporary heater targets
-
+```text
 75°C
 72°C
 68°C
 64°C
 60°C
 56°C
+```
 
-↓
+This is **NOT** a bug.
 
-Final chamber temperature
+It is **NOT** changing your desired chamber temperature.
+
+It is simply Smart Chamber Heater taking control of the heater.
+
+---
+
+# 🧠 Step 4 — What Is Actually Happening?
+
+As soon as heating begins, Smart Chamber Heater stores the value you requested.
+
+For example:
+
+```text
+User request
 
 50°C
 ```
 
+Internally, the controller permanently stores:
+
+```text
+Desired chamber temperature
+
+50°C
+```
+
+This value **never changes**.
+
+It remains the target for the entire heating cycle.
+
+Instead of keeping the heater at a fixed temperature, Smart Chamber Heater continuously calculates the best heater target using:
+
+- Current chamber temperature
+- Chamber heating rate
+- Remaining thermal energy stored inside the PTC heater
+- Selected control mode
+- Hold Mode
+- Safety limits
+- Adaptive Predictive Control
+
+The result is something like this:
+
+```text
+Your requested chamber temperature
+
+50°C
+        │
+        ▼
+Stored internally
+50°C
+        │
+        ▼
+Smart Chamber Heater
+calculates the optimal
+heater target
+        │
+        ▼
+75°C
+72°C
+68°C
+64°C
+60°C
+56°C
+        │
+        ▼
+Measured chamber temperature
+
+50°C
+```
+
+The changing values you see are **temporary heater targets**.
+
+They are generated automatically to:
+
+- Heat the chamber faster.
+- Reduce overshoot.
+- Improve temperature stability.
+- Reduce unnecessary heater cycling.
+- Prepare Hold Mode.
+- Optimize Adaptive Predictive Control.
+
+Your requested chamber temperature **always remains exactly the same**.
+
 ---
 
-# 🤖 Step 5 — Enjoy Automatic Control
+# 🤖 Step 5 — Let Smart Chamber Heater Do the Work
 
-After selecting the desired chamber temperature, Smart Chamber Heater automatically manages:
+Once you've selected the desired chamber temperature, there is nothing else to do.
+
+The controller automatically manages:
 
 - Heater target
 - Fan speeds
 - Hold Mode
-- Overshoot mitigation
 - Adaptive Predictive Control
-- Automatic Control Mode (when enabled)
+- Overshoot mitigation
+- Automatic Control Mode (if enabled)
 
-No further user interaction is required.
+Simply choose the chamber temperature you want and let Smart Chamber Heater handle the rest.
 
-Simply choose the chamber temperature you want and let Smart Chamber Heater handle everything else.
+---
+
+> [!IMPORTANT]
+>
+> **Do not manually change the heater target while Smart Chamber Heater is running.**
+>
+> The controller intentionally changes the heater target many times during the heating process.
+>
+> Those changes are part of the control algorithm and are essential for achieving the best heating performance, temperature stability and overshoot reduction.
+
+---
 
 > [!TIP]
 >
-> During normal operation, **do not manually change the heater target**.
+> Think of the `chamber_heater` temperature as a **request**, not as the actual PTC heater temperature.
 >
-> Dynamic heater target adjustments are an intentional part of the control strategy and are essential for achieving the best balance between heating speed, temperature stability and safety.
+> You request:
+>
+> **"I want a 50°C chamber."**
+>
+> Smart Chamber Heater then decides **how** the heater should operate to reach that temperature in the safest, fastest and most stable way.
