@@ -16,7 +16,7 @@ continuously evaluates the thermal state of the printer and dynamically
 adapts the heater output to maximize heating performance, improve
 temperature stability and reduce overshoot.
 
-[![Watch the Video](https://youtube.com)](https://youtube.com/watch?v=cAEAzvAO1ms&ra=m)
+[![Watch the video!](https://img.youtube.com/vi/cAEAzvAO1ms/maxresdefault.jpg)](https://www.youtube.com/watch?v=cAEAzvAO1ms)
 
 
 The project is intended for enclosed printers using a PTC chamber
