@@ -16,6 +16,8 @@ continuously evaluates the thermal state of the printer and dynamically
 adapts the heater output to maximize heating performance, improve
 temperature stability and reduce overshoot.
 
+Check [usage file](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/blob/main/usage.md) before start using this macro, for understand how the magic happen!
+
 Click the image below and watch the video! 
 
 [![Watch the video!](https://img.youtube.com/vi/cAEAzvAO1ms/maxresdefault.jpg)](https://www.youtube.com/watch?v=cAEAzvAO1ms)
