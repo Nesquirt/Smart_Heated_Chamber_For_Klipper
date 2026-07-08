@@ -19,7 +19,7 @@ temperature stability and reduce overshoot.
 > [!WARNING]
 > ## Read Before Use
 >
-> It is **strongly recommended** to read **[usage.md](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/blob/main/usage.md)**, **[Parameters.md](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/blob/main/Parameters.md)** and the **[Wiki](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/wiki)** before using Smart Chamber Heater.
+> It is **strongly recommended** to read **[usage.md](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/blob/main/usage.md)**, **[Parameters.md](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/blob/main/Macro/Parameters.md)** and the **[Wiki](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/wiki)** before using Smart Chamber Heater.
 >
 > Smart Chamber Heater behaves differently from a standard Klipper heater. Understanding its operating principles will ensure proper configuration and the best possible performance.
 
@@ -100,7 +100,7 @@ You can find other doc [here](https://github.com/Nesquirt/Smart_Heated_Chamber_F
 - Thermal fuse protection
 - Chamber over-temperature protection
 - Diagnostic macros
-- Marlin compatibility (M141 / M191)
+- Slicer compatibility (M141 / M191)
 
 ------------------------------------------------------------------------
 
@@ -181,9 +181,7 @@ Current Chamber Temperature
 
 - Heating Rate × Prediction Horizon
 
-- 
-
-Remaining PTC Thermal Energy
+- Remaining PTC Thermal Energy
 
 ------------------------------------------------------------------------
 
@@ -215,11 +213,11 @@ Independent safety layers include:
 
   -------------------------- ------------------------------------------
 
-CHAMBER_LIMITS             Display calculated thermal limits
+CHAMBER_LIMITS               Display calculated thermal limits
 
-CHAMBER_CONTROL_STATUS     Show selected algorithm and next control decision
+CHAMBER_CONTROL_STATUS       Show selected algorithm and next control decision
 
-CHAMBER_PREDICTION_STATUS         Show prediction model values
+CHAMBER_PREDICTION_STATUS    Show prediction model values
 
 ------------------------------------------------------------------------
 
