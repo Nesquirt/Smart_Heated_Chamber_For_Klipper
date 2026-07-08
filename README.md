@@ -23,9 +23,10 @@ temperature stability and reduce overshoot.
 >
 > Smart Chamber Heater behaves differently from a standard Klipper heater. Understanding its operating principles will ensure proper configuration and the best possible performance.
 
-Click the image below and watch the video! 
+>[!TIP]
+>Click the image below and watch the video! 
 
-[![Watch the video!](https://img.youtube.com/vi/cAEAzvAO1ms/hqdefault.jpg)](https://www.youtube.com/watch?v=cAEAzvAO1ms)
+>[![Watch the video!](https://img.youtube.com/vi/cAEAzvAO1ms/hqdefault.jpg)](https://www.youtube.com/watch?v=cAEAzvAO1ms)
 
 
 The project is intended for enclosed printers using a PTC chamber
