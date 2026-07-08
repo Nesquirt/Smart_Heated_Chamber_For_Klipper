@@ -16,6 +16,13 @@ continuously evaluates the thermal state of the printer and dynamically
 adapts the heater output to maximize heating performance, improve
 temperature stability and reduce overshoot.
 
+> [!WARNING]
+> ## Read Before Use
+>
+> It is **strongly recommended** to read **[usage.md](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/blob/main/usage.md)**, **[Parameters.md](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/blob/main/Parameters.md)** and the **[Wiki](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/wiki)** before using Smart Chamber Heater.
+>
+> Smart Chamber Heater behaves differently from a standard Klipper heater. Understanding its operating principles will ensure proper configuration and the best possible performance.
+
 Check [usage file](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/blob/main/usage.md) before start using this macro, for understand how the magic happen!
 
 AND DON'T FORGET TO CHECK OUR [WIKI](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/wiki), YOU WILL FIND A LOT OF USEFUL INFO!
