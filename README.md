@@ -19,7 +19,7 @@ temperature stability and reduce overshoot.
 > [!WARNING]
 > ## Read Before Use
 >
-> It is **strongly recommended** to read **[usage.md](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/blob/main/usage.md)**, **[Parameters.md](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/blob/main/Parameters.md)** and the **[Wiki](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/wiki)** before using Smart Chamber Heater.
+> It is **strongly recommended** to read **[usage.md](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/blob/main/usage.md)**, **[Parameters.md](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/blob/main/Macro/Parameters.md)** and the **[Wiki](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/wiki)** before using Smart Chamber Heater.
 >
 > Smart Chamber Heater behaves differently from a standard Klipper heater. Understanding its operating principles will ensure proper configuration and the best possible performance.
 
