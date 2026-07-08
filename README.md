@@ -16,6 +16,8 @@ continuously evaluates the thermal state of the printer and dynamically
 adapts the heater output to maximize heating performance, improve
 temperature stability and reduce overshoot.
 
+Click the image below and watch the video! 
+
 [![Watch the video!](https://img.youtube.com/vi/cAEAzvAO1ms/maxresdefault.jpg)](https://www.youtube.com/watch?v=cAEAzvAO1ms)
 
 
