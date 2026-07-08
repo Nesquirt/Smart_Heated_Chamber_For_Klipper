@@ -23,22 +23,32 @@ temperature stability and reduce overshoot.
 >
 > Smart Chamber Heater behaves differently from a standard Klipper heater. Understanding its operating principles will ensure proper configuration and the best possible performance.
 
-Check [usage file](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/blob/main/usage.md) before start using this macro, for understand how the magic happen!
-
-AND DON'T FORGET TO CHECK OUR [WIKI](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/wiki), YOU WILL FIND A LOT OF USEFUL INFO!
-
 Click the image below and watch the video! 
 
-[![Watch the video!](https://img.youtube.com/vi/cAEAzvAO1ms/maxresdefault.jpg)](https://www.youtube.com/watch?v=cAEAzvAO1ms)
+[![Watch the video!](https://img.youtube.com/vi/cAEAzvAO1ms/hqdefault.jpg)](https://www.youtube.com/watch?v=cAEAzvAO1ms)
 
 
 The project is intended for enclosed printers using a PTC chamber
 heater, but its architecture allows it to be adapted to virtually any
 chamber heating system.
 
-[FAQ](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/blob/main/Docs/faq.md)
+## 📚 Table of Content
 
-You can find other doc [here](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/tree/main/Docs)
+Before using Smart Chamber Heater, it is **strongly recommended** to read the following documentation.
+
+| 📄 Resource | Description |
+|------------|-------------|
+| 🎥 **[Introduction Video](https://www.youtube.com/watch?v=cAEAzvAO1ms)** | Project overview, features and controller philosophy. |
+| 📖 **[Usage Guide](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/blob/main/usage.md)** | Learn how to use Smart Chamber Heater correctly. |
+| ⚙️ **[Configuration Parameters](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/blob/main/Macro/Parameters.md)** | Configure the controller for your hardware. |
+| 🧩 **[Macro Folder](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/tree/main/Macro)** | Contains `chamber_heater.cfg` and all macro files. |
+| 📚 **[Wiki](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/wiki)** | Installation guides, tuning, examples and technical documentation. |
+| ❓ **[FAQ](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/blob/main/Docs/faq.md)** | Frequently asked questions. |
+| 🛡️ **[Security](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/blob/main/SECURITY.md)** | Safety information and disclaimer. |
+| 📂 **[Docs Folder](https://github.com/Nesquirt/Smart_Heated_Chamber_For_Klipper/tree/main/Docs)** | Complete project documentation. |
+
+> [!TIP]
+> **New here?** Start with **Usage Guide → Configuration Parameters → Macro Folder → Wiki**.
 
   -----------------------------------------------------------------------
 
